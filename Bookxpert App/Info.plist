@@ -34,6 +34,15 @@
             </array>
         </dict>
     </array>
+    
+    <key>NSCameraUsageDescription</key>
+    <string>We use your camera to take photos.</string>
+    
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>We use your photo library to choose images.</string>
+    
+    <key>NSUserNotificationUsageDescription</key>
+    <string>We send notifications to alert you when data is deleted.</string>
 </dict>
 </plist>
 

@@ -22,9 +22,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = window
         window.makeKeyAndVisible()
         
-        if Auth.auth().currentUser != nil {
+        // Check if user exists in Core Data
+        if UserRepository.shared.getUser() != nil {
+            // User saved locally, consider logged in
             window.rootViewController = UINavigationController(rootViewController: HomeViewController())
         } else {
+            // No user saved, showing login
             window.rootViewController = UINavigationController(rootViewController: LoginViewController())
         }
     }

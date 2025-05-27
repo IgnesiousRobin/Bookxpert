@@ -11,6 +11,20 @@
 		FE1049142DE4E32E001527A9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FE1049132DE4E32E001527A9 /* GoogleService-Info.plist */; };
 		FE800F922DE5115600CEB14B /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE800F912DE5115600CEB14B /* AuthViewModel.swift */; };
 		FE800F942DE51C5200CEB14B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE800F932DE51C5200CEB14B /* HomeViewController.swift */; };
+		FE800FA42DE59E5800CEB14B /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE800FA32DE59E5800CEB14B /* UserModel.swift */; };
+		FE800FA62DE5B25300CEB14B /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE800FA52DE5B25300CEB14B /* UserRepository.swift */; };
+		FE800FA82DE5E1BA00CEB14B /* PDFViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE800FA72DE5E1BA00CEB14B /* PDFViewerViewController.swift */; };
+		FE800FAA2DE601E600CEB14B /* ImagePickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE800FA92DE601E600CEB14B /* ImagePickerViewModel.swift */; };
+		FE800FAC2DE602B800CEB14B /* ImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE800FAB2DE602B800CEB14B /* ImagePickerViewController.swift */; };
+		FE800FAF2DE624E800CEB14B /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE800FAE2DE624E800CEB14B /* APIService.swift */; };
+		FE800FB12DE6256F00CEB14B /* APIItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE800FB02DE6256F00CEB14B /* APIItem.swift */; };
+		FE800FB32DE6259100CEB14B /* APIDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE800FB22DE6259100CEB14B /* APIDataViewModel.swift */; };
+		FE800FB52DE6385900CEB14B /* APIDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE800FB42DE6385900CEB14B /* APIDataRepository.swift */; };
+		FE800FB72DE6400F00CEB14B /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE800FB62DE6400F00CEB14B /* ProductListViewController.swift */; };
+		FE800FBB2DE6406A00CEB14B /* ProductListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE800FBA2DE6406A00CEB14B /* ProductListViewModel.swift */; };
+		FE800FBD2DE6415600CEB14B /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE800FBC2DE6415600CEB14B /* AddItemViewController.swift */; };
+		FE800FBF2DE6428F00CEB14B /* NotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE800FBE2DE6428F00CEB14B /* NotificationHelper.swift */; };
+		FE800FC12DE6430400CEB14B /* AddItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE800FC02DE6430400CEB14B /* AddItemViewModel.swift */; };
 		FE89DEEB2DE480DB002E5255 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE89DEEA2DE480DB002E5255 /* AppDelegate.swift */; };
 		FE89DEED2DE480DB002E5255 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE89DEEC2DE480DB002E5255 /* SceneDelegate.swift */; };
 		FE89DEEF2DE480DB002E5255 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE89DEEE2DE480DB002E5255 /* LoginViewController.swift */; };
@@ -27,6 +41,20 @@
 		FE1049132DE4E32E001527A9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FE800F912DE5115600CEB14B /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		FE800F932DE51C5200CEB14B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		FE800FA32DE59E5800CEB14B /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		FE800FA52DE5B25300CEB14B /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		FE800FA72DE5E1BA00CEB14B /* PDFViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFViewerViewController.swift; sourceTree = "<group>"; };
+		FE800FA92DE601E600CEB14B /* ImagePickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerViewModel.swift; sourceTree = "<group>"; };
+		FE800FAB2DE602B800CEB14B /* ImagePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerViewController.swift; sourceTree = "<group>"; };
+		FE800FAE2DE624E800CEB14B /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		FE800FB02DE6256F00CEB14B /* APIItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIItem.swift; sourceTree = "<group>"; };
+		FE800FB22DE6259100CEB14B /* APIDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIDataViewModel.swift; sourceTree = "<group>"; };
+		FE800FB42DE6385900CEB14B /* APIDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIDataRepository.swift; sourceTree = "<group>"; };
+		FE800FB62DE6400F00CEB14B /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
+		FE800FBA2DE6406A00CEB14B /* ProductListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewModel.swift; sourceTree = "<group>"; };
+		FE800FBC2DE6415600CEB14B /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
+		FE800FBE2DE6428F00CEB14B /* NotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHelper.swift; sourceTree = "<group>"; };
+		FE800FC02DE6430400CEB14B /* AddItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewModel.swift; sourceTree = "<group>"; };
 		FE89DEE72DE480DB002E5255 /* Bookxpert App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bookxpert App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE89DEEA2DE480DB002E5255 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE89DEEC2DE480DB002E5255 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +99,10 @@
 			isa = PBXGroup;
 			children = (
 				FE800F912DE5115600CEB14B /* AuthViewModel.swift */,
+				FE800FB22DE6259100CEB14B /* APIDataViewModel.swift */,
+				FE800FA92DE601E600CEB14B /* ImagePickerViewModel.swift */,
+				FE800FBA2DE6406A00CEB14B /* ProductListViewModel.swift */,
+				FE800FC02DE6430400CEB14B /* AddItemViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -80,6 +112,10 @@
 			children = (
 				FE89DEEE2DE480DB002E5255 /* LoginViewController.swift */,
 				FE800F932DE51C5200CEB14B /* HomeViewController.swift */,
+				FE800FA72DE5E1BA00CEB14B /* PDFViewerViewController.swift */,
+				FE800FAB2DE602B800CEB14B /* ImagePickerViewController.swift */,
+				FE800FB62DE6400F00CEB14B /* ProductListViewController.swift */,
+				FE800FBC2DE6415600CEB14B /* AddItemViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -87,8 +123,20 @@
 		FE800F902DE5111100CEB14B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FE800FA32DE59E5800CEB14B /* UserModel.swift */,
+				FE800FA52DE5B25300CEB14B /* UserRepository.swift */,
+				FE800FB42DE6385900CEB14B /* APIDataRepository.swift */,
+				FE800FB02DE6256F00CEB14B /* APIItem.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		FE800FAD2DE624D800CEB14B /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				FE800FAE2DE624E800CEB14B /* APIService.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		FE89DEDE2DE480DB002E5255 = {
@@ -112,11 +160,13 @@
 		FE89DEE92DE480DB002E5255 /* Bookxpert App */ = {
 			isa = PBXGroup;
 			children = (
+				FE800FAD2DE624D800CEB14B /* Networking */,
 				FE800F902DE5111100CEB14B /* Model */,
 				FE800F8F2DE5110900CEB14B /* View */,
 				FE800F8E2DE510E600CEB14B /* ViewModel */,
 				FE89DEEA2DE480DB002E5255 /* AppDelegate.swift */,
 				FE89DEEC2DE480DB002E5255 /* SceneDelegate.swift */,
+				FE800FBE2DE6428F00CEB14B /* NotificationHelper.swift */,
 				FE89DEF02DE480DB002E5255 /* Main.storyboard */,
 				FE89DEF62DE480DE002E5255 /* Assets.xcassets */,
 				FE89DEF82DE480DE002E5255 /* LaunchScreen.storyboard */,
@@ -244,10 +294,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE800F922DE5115600CEB14B /* AuthViewModel.swift in Sources */,
+				FE800FB52DE6385900CEB14B /* APIDataRepository.swift in Sources */,
+				FE800FA42DE59E5800CEB14B /* UserModel.swift in Sources */,
 				FE89DEF52DE480DB002E5255 /* Bookxpert_App.xcdatamodeld in Sources */,
+				FE800FA82DE5E1BA00CEB14B /* PDFViewerViewController.swift in Sources */,
+				FE800FC12DE6430400CEB14B /* AddItemViewModel.swift in Sources */,
+				FE800FBD2DE6415600CEB14B /* AddItemViewController.swift in Sources */,
+				FE800FB12DE6256F00CEB14B /* APIItem.swift in Sources */,
+				FE800FB72DE6400F00CEB14B /* ProductListViewController.swift in Sources */,
+				FE800FB32DE6259100CEB14B /* APIDataViewModel.swift in Sources */,
 				FE89DEEF2DE480DB002E5255 /* LoginViewController.swift in Sources */,
+				FE800FAC2DE602B800CEB14B /* ImagePickerViewController.swift in Sources */,
 				FE89DEEB2DE480DB002E5255 /* AppDelegate.swift in Sources */,
+				FE800FAA2DE601E600CEB14B /* ImagePickerViewModel.swift in Sources */,
 				FE89DEED2DE480DB002E5255 /* SceneDelegate.swift in Sources */,
+				FE800FA62DE5B25300CEB14B /* UserRepository.swift in Sources */,
+				FE800FAF2DE624E800CEB14B /* APIService.swift in Sources */,
+				FE800FBF2DE6428F00CEB14B /* NotificationHelper.swift in Sources */,
+				FE800FBB2DE6406A00CEB14B /* ProductListViewModel.swift in Sources */,
 				FE800F942DE51C5200CEB14B /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,14 +8,17 @@
 import Foundation
 import Firebase
 import GoogleSignIn
+import UIKit
 
 class AuthViewModel {
     var onSignInSuccess: (() -> Void)?
     var onError: (() -> Void)?
     
+    private let userRepository = UserRepository.shared
+    
     func signInWithGoogle(vc: UIViewController) {
-        GIDSignIn.sharedInstance.signIn(withPresenting: vc) { signInResult, error in
-
+        GIDSignIn.sharedInstance.signIn(withPresenting: vc) { [weak self] signInResult, error in
+            
             guard error == nil else { return }
             
             guard let signInResult = signInResult else { return }
@@ -43,7 +46,13 @@ class AuthViewModel {
                 
                 print("Signed in to Firebase: \(String(describing: result?.user.email))")
                 
-                self.onSignInSuccess?()
+                if let profile = user.profile {
+                    let name = profile.name 
+                    let email = profile.email
+                    self?.userRepository.saveUser(name: name, email: email)
+                }
+                
+                self?.onSignInSuccess?()
             }
         }
     }
@@ -52,6 +61,7 @@ class AuthViewModel {
         do {
             try Auth.auth().signOut()
             GIDSignIn.sharedInstance.signOut()
+            userRepository.deleteAllUsers()
             completion(true)
         } catch {
             print("Sign out failed: \(error.localizedDescription)")

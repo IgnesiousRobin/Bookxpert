@@ -2,6 +2,18 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:ItemEntity+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:ItemEntity+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
+      location = "group:User+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "group:User+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
       location = "group:Bookxpert App.xcodeproj">
    </FileRef>
    <FileRef
