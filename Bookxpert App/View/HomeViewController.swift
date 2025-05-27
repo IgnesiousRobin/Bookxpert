@@ -12,6 +12,14 @@ class HomeViewController: UIViewController {
     
     let viewModel = AuthViewModel()
     
+    private let mainStackView: UIStackView = {
+        let stack = UIStackView()
+        stack.axis = .vertical
+        stack.spacing = 20
+        stack.alignment = .center
+        return stack
+    }()
+    
     private let uploadImageButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Image Upload", for: .normal)
@@ -36,6 +44,27 @@ class HomeViewController: UIViewController {
         return button
     }()
     
+    private let notificationLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Notifications"
+        label.font = UIFont.systemFont(ofSize: 17)
+        return label
+    }()
+
+    private let notificationSwitch: UISwitch = {
+        let toggle = UISwitch()
+        toggle.isOn = NotificationSettingsManager.shared.isNotificationEnabled
+        return toggle
+    }()
+
+    private let notificationStack: UIStackView = {
+        let stack = UIStackView()
+        stack.axis = .horizontal
+        stack.spacing = 10
+        stack.alignment = .center
+        return stack
+    }()
+    
     private let signOutButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Sign Out", for: .normal)
@@ -53,46 +82,53 @@ class HomeViewController: UIViewController {
     }
 
     private func setupUI() {
-        view.addSubview(uploadImageButton)
-        view.addSubview(viewPDFButton)
-        view.addSubview(viewProductsButton)
+        // Add buttons to main vertical stack
+        mainStackView.addArrangedSubview(uploadImageButton)
+        mainStackView.addArrangedSubview(viewPDFButton)
+        mainStackView.addArrangedSubview(viewProductsButton)
+        view.addSubview(mainStackView)
+        
+        // Notification toggle setup
+        notificationStack.addArrangedSubview(notificationLabel)
+        notificationStack.addArrangedSubview(notificationSwitch)
+        view.addSubview(notificationStack)
+
+        // Sign out button
         view.addSubview(signOutButton)
         
-        uploadImageButton.translatesAutoresizingMaskIntoConstraints = false
-        viewPDFButton.translatesAutoresizingMaskIntoConstraints = false
-        viewProductsButton.translatesAutoresizingMaskIntoConstraints = false
-        signOutButton.translatesAutoresizingMaskIntoConstraints = false
-        
+        // Turn off autoresizing
+        [mainStackView, uploadImageButton, viewPDFButton, viewProductsButton, notificationStack, signOutButton].forEach {
+            $0.translatesAutoresizingMaskIntoConstraints = false
+        }
+
+        // Apply width constraint to buttons
+        [uploadImageButton, viewPDFButton, viewProductsButton].forEach {
+            $0.widthAnchor.constraint(equalToConstant: 200).isActive = true
+            $0.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        }
+
         NSLayoutConstraint.activate([
+            // Center main stack near top
+            mainStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            mainStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 40),
             
-            uploadImageButton.bottomAnchor.constraint(equalTo: viewPDFButton.topAnchor, constant: -30),
-            uploadImageButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            uploadImageButton.widthAnchor.constraint(equalToConstant: 200),
-            uploadImageButton.heightAnchor.constraint(equalToConstant: 50),
+            // Notification toggle above Sign Out
+            notificationStack.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            notificationStack.bottomAnchor.constraint(equalTo: signOutButton.topAnchor, constant: -30),
             
-            viewPDFButton.bottomAnchor.constraint(equalTo: viewProductsButton.topAnchor, constant: -30),
-            viewPDFButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            viewPDFButton.widthAnchor.constraint(equalToConstant: 200),
-            viewPDFButton.heightAnchor.constraint(equalToConstant: 50),
-            
-            viewProductsButton.bottomAnchor.constraint(equalTo: signOutButton.topAnchor, constant: -30),
-            viewProductsButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            viewProductsButton.widthAnchor.constraint(equalToConstant: 200),
-            viewProductsButton.heightAnchor.constraint(equalToConstant: 50),
-            
+            // Sign Out at bottom
             signOutButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            signOutButton.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            signOutButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -30),
             signOutButton.widthAnchor.constraint(equalToConstant: 200),
             signOutButton.heightAnchor.constraint(equalToConstant: 50)
         ])
         
+        // Add targets
         uploadImageButton.addTarget(self, action: #selector(uploadImageTapped), for: .touchUpInside)
-
         viewPDFButton.addTarget(self, action: #selector(viewPDFTapped), for: .touchUpInside)
-        
         viewProductsButton.addTarget(self, action: #selector(viewProductTapped), for: .touchUpInside)
-        
         signOutButton.addTarget(self, action: #selector(signOutTapped), for: .touchUpInside)
+        notificationSwitch.addTarget(self, action: #selector(notificationSwitchToggled), for: .valueChanged)
     }
     
     @objc private func uploadImageTapped() {
@@ -119,6 +155,12 @@ class HomeViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    @objc private func notificationSwitchToggled() {
+        let isEnabled = notificationSwitch.isOn
+        NotificationSettingsManager.shared.isNotificationEnabled = isEnabled
+        print("Notifications \(isEnabled ? "enabled" : "disabled")")
     }
     
     @objc private func signOutTapped() {

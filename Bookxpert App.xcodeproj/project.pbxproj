@@ -25,6 +25,7 @@
 		FE800FBD2DE6415600CEB14B /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE800FBC2DE6415600CEB14B /* AddItemViewController.swift */; };
 		FE800FBF2DE6428F00CEB14B /* NotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE800FBE2DE6428F00CEB14B /* NotificationHelper.swift */; };
 		FE800FC12DE6430400CEB14B /* AddItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE800FC02DE6430400CEB14B /* AddItemViewModel.swift */; };
+		FE800FC32DE64D0600CEB14B /* NotificationSettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE800FC22DE64D0600CEB14B /* NotificationSettingsManager.swift */; };
 		FE89DEEB2DE480DB002E5255 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE89DEEA2DE480DB002E5255 /* AppDelegate.swift */; };
 		FE89DEED2DE480DB002E5255 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE89DEEC2DE480DB002E5255 /* SceneDelegate.swift */; };
 		FE89DEEF2DE480DB002E5255 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE89DEEE2DE480DB002E5255 /* LoginViewController.swift */; };
@@ -55,6 +56,7 @@
 		FE800FBC2DE6415600CEB14B /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
 		FE800FBE2DE6428F00CEB14B /* NotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHelper.swift; sourceTree = "<group>"; };
 		FE800FC02DE6430400CEB14B /* AddItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewModel.swift; sourceTree = "<group>"; };
+		FE800FC22DE64D0600CEB14B /* NotificationSettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingsManager.swift; sourceTree = "<group>"; };
 		FE89DEE72DE480DB002E5255 /* Bookxpert App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bookxpert App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE89DEEA2DE480DB002E5255 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE89DEEC2DE480DB002E5255 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +141,15 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
+		FE800FC42DE64D1500CEB14B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FE800FBE2DE6428F00CEB14B /* NotificationHelper.swift */,
+				FE800FC22DE64D0600CEB14B /* NotificationSettingsManager.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		FE89DEDE2DE480DB002E5255 = {
 			isa = PBXGroup;
 			children = (
@@ -166,7 +177,7 @@
 				FE800F8E2DE510E600CEB14B /* ViewModel */,
 				FE89DEEA2DE480DB002E5255 /* AppDelegate.swift */,
 				FE89DEEC2DE480DB002E5255 /* SceneDelegate.swift */,
-				FE800FBE2DE6428F00CEB14B /* NotificationHelper.swift */,
+				FE800FC42DE64D1500CEB14B /* Helpers */,
 				FE89DEF02DE480DB002E5255 /* Main.storyboard */,
 				FE89DEF62DE480DE002E5255 /* Assets.xcassets */,
 				FE89DEF82DE480DE002E5255 /* LaunchScreen.storyboard */,
@@ -303,6 +314,7 @@
 				FE800FB12DE6256F00CEB14B /* APIItem.swift in Sources */,
 				FE800FB72DE6400F00CEB14B /* ProductListViewController.swift in Sources */,
 				FE800FB32DE6259100CEB14B /* APIDataViewModel.swift in Sources */,
+				FE800FC32DE64D0600CEB14B /* NotificationSettingsManager.swift in Sources */,
 				FE89DEEF2DE480DB002E5255 /* LoginViewController.swift in Sources */,
 				FE800FAC2DE602B800CEB14B /* ImagePickerViewController.swift in Sources */,
 				FE89DEEB2DE480DB002E5255 /* AppDelegate.swift in Sources */,
